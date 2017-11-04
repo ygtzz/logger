@@ -1,11 +1,12 @@
-var CONSOLE_METHOD = ['log', 'error', 'info', 'warn', 'dir', 'time', 'timeEnd', 'clear', 'table', 'assert', 'count', 'debug'];
+const CONSOLE_METHOD = ['log', 'error', 'info', 'warn', 'dir', 'time', 'timeEnd', 'clear', 'table', 'assert', 'count', 'debug'];
 
-var logger = {
+let logger = {
     errors:[],
     timer:null,
     url:'',
     init:function(opts){
         this.url = opts.url;
+        this.delay = opts.delay || 30000;
     },
     bind:function(){
 
@@ -25,11 +26,11 @@ var logger = {
                     self.send();
                     self.errors.length = 0;
                 }
-            },30000);
+            },self.delay);
         }
     },
     send:function(){
-        
+        //跨域post提交
     },
     _rejectionHandler:function(e){
         this.add(e);
@@ -100,3 +101,5 @@ var logger = {
         this.restoreConsole();
     }
 }
+
+export {logger}

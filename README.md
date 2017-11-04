@@ -1,2 +1,3 @@
 # logger
-front end log component
+
+front end log tool
