@@ -1,0 +1,62 @@
+html,body{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    font-family:'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+    font-size:28px;
+    line-height:1.5;
+}
+/*reset*/
+html * {
+    outline: 0;
+    /*移除ios和android的点击蓝色背景，实际上是设置为透明*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}*/
+/*global*/
+ul{list-style:none;}
+ul,li,p{margin:0;padding:0}
+.dot{background-color:#f43531;border-radius:50%;position:absolute;z-index:2;}
+.stage{position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;background-color:#F1F0F6;}
+.icon{display:inline-block;background-size:contain;background-position:center;background-repeat:no-repeat;}
+.gray{color:#B1B5B9}
+.s9{transform:scale(.9)}
+/*slideup*/
+.slide-up-enter-active{transition:all .1s ease}
+.slide-up-leave-active{transition:all .1s ease}
+.slide-up-enter,.slide-up-leave-active{
+    transform:translateY(100%);
+    opacity:0
+}
+/*slideleft*/
+.cover-enter-active{transition:all .3s ease}
+.cover-leave-active{transition:all .35s ease;}
+.cover-enter,.cover-leave-active{
+    transform: translate3d(100%,0,0);
+    opacity: .98;
+}
+/*fade*/
+.fade-enter-active,.fade-leave-active{
+    transition: opacity .3s ease;
+}
+.fade-enter,.fade-leave-active{
+    opacity:0
+}
+/*element-ui rewrite*/
+.mint-switch-input:checked + .mint-switch-core {
+    border-color: #04be02 !important;
+    background-color: #04be02 !important;
+}
