@@ -49,7 +49,7 @@ module.exports = merge(baseWebapckConfig,{
                 ]
             },
             {
-                test: /\.scss$/, 
+                test: /\.less$/, 
                 use: [
                     { loader: 'style-loader' },
                     { 
